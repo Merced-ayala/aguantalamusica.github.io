@@ -1,0 +1,182 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;  /* Usa Poppins en lugar de Arial */
+    margin: 0;
+    padding: 0;
+    background-color: #fceedd;
+    overflow-x: hidden; /* Evitar desbordamiento horizontal */
+}
+
+/* Tipografía global para encabezados y párrafos */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+header .navbar {
+    height: 3.75rem;              /* 60px */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);  /* 4px 6px */
+    display: flex;
+    align-items: center;
+    padding: 0 0.9375rem;         /* 15px */
+}
+
+header .navbar-brand img {
+    border-radius: 50%;
+    width: 3.75rem;               /* 60px */
+    height: 3.75rem;              /* 60px */
+}
+
+.navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0 0.9375rem;         /* 15px */
+    line-height: 3.75rem;         /* 60px */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ea2336;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ea2336;
+    font-weight: bold;
+}
+
+.navbar-collapse {
+    background-color: #fff;       /* Fondo blanco solo para el menú desplegable */
+    border-radius: 0.75rem;        /* 12px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 4px 8px */
+    padding: 0.625rem;            /* 10px */
+}
+
+/* Asegurarse de que los estilos no afecten el navbar en pantallas grandes */
+@media (min-width: 62rem) {   /* 992px */
+    .navbar-collapse {
+        background-color: transparent; /* Fondo transparente en pantallas grandes */
+        border-radius: 0;              /* Sin bordes redondeados */
+        box-shadow: none;              /* Sin sombra */
+        padding: 0;                    /* Sin espaciado adicional */
+    }
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #ffac04;
+    background-position: center;
+    padding: 2rem;
+    color: #333;
+}
+
+.blog-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    position: center; /* Valor no válido, se mantiene igual según la solicitud */
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #d0021b; /* Color rojo de los botones */
+    color: #fff;
+    border: none;
+    border-radius: 1.25rem;      /* 20px */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #a00116;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.post {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.9375rem;     /* 15px */
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.post-image {
+    width: 9.375rem;             /* 150px */
+    height: 6.25rem;             /* 100px */
+    border-radius: 0.625rem;      /* 10px */
+    object-fit: cover;
+}
+
+.post-content {
+    max-width: 70%;
+}
+
+.post-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    width: 100vw;
+    text-align: center;
+    padding: 1.875rem 0;         /* 30px 0 */
+}
+
+footer p {
+    color: #fff;
+    margin: 0.625rem 0;          /* 10px 0 */
+    font-size: 1rem;
+}
+
+footer .socials {
+    display: inline-flex;
+    gap: 0.9375rem;             /* 15px */
+}
+
+footer .socials a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 0.625rem;         /* 10px */
+    position: relative;
+}
+
+footer .socials a:not(:first-child) {
+    border-left: 0.0625rem solid #fff; /* 1px */
+    padding-left: 0.9375rem;     /* 15px */
+}
+
+footer .socials a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,265 @@
+/* General Body Styling */
+body {
+    /* Cambiado a Poppins para el texto general */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fceedd;
+    overflow-x: hidden; /* Evitar desbordamiento horizontal */
+}
+
+/* Global typography for headings */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+header .navbar {
+    height: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+header .navbar-brand img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0 15px;
+    line-height: 60px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ea2336;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ea2336;
+    font-weight: bold;
+}
+
+.navbar-collapse {
+    background-color: #fff; /* Fondo blanco solo para el menú desplegable */
+    border-radius: 12px; /* Bordes redondeados del menú desplegable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Asegurarse de que los estilos no afecten el navbar en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        background-color: transparent; /* Fondo transparente en pantallas grandes */
+        border-radius: 0; /* Sin bordes redondeados */
+        box-shadow: none; /* Sin sombra */
+        padding: 0; /* Sin espaciado adicional */
+    }
+}
+
+#promo-banner {
+    position: static;
+    top: 60px; /* Ajusta según la altura de la navbar */
+    width: 100%;
+    background-color: #ea2336;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#promo-banner a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Fondo de la página */
+.fondo1 {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    background-image: url('../img/5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%; /* Ancho relativo */
+}
+
+/* Pseudo-elemento para oscurecer */
+.fondo1:before {
+    content: ''; /* Necesario para que el pseudo-elemento aparezca */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecer con negro semi-transparente */
+    z-index: 1; /* Asegura que esté encima de la imagen de fondo */
+}
+
+/* Contenido interno */
+.fondo1 > * {
+    position: relative;
+    z-index: 2; /* Eleva el contenido por encima del pseudo-elemento */
+}
+
+.fondo2 {
+    background-color: #ffac04;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%; /* Cambiado a ancho relativo */
+}
+
+/* Imagen logo  */
+.logo-aguanta {
+    opacity: 0;
+    transform: scale(0.8); /* Tamaño inicial más pequeño */
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s; /* Retrasa la animación 1 segundo */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1); /* Tamaño normal */
+    }
+}
+
+/* Contenedor de texto */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.text-container h2 {
+    /* Se fuerza Montserrat para h2 */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; /* Ajuste responsivo */
+    color: #fff;
+}
+
+.text-container p {
+    font-size: 0.5rem ; /* Ajuste responsivo */
+    color: #fff;
+    opacity: 0;
+    transform: scale(0.8); /* Tamaño inicial más pequeño */
+    animation: fadeIn 3s ease forwards;
+    animation-delay: 3s; /* Retrasa la animación 3 segundos */
+}
+
+.highlight {
+    color: #ea2336;
+}
+
+.letras {
+    font-size: 3.8rem; /* Ajuste responsivo */
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8); /* Tamaño inicial más pequeño */
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s; /* Retrasa la animación 2 segundos */
+}
+
+/* Contenedor del video */
+.video-container {
+    display: flex;
+    flex-wrap: wrap; /* Ajuste para dispositivos pequeños */
+    justify-content: center;
+    gap: 10px;
+}
+
+.video-container a {
+    font-size: 1rem; /* Ajuste responsivo */
+    padding: 8px 15px;
+    margin: 1.5vh;
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0; /* Ajustado para mayor altura */
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+footer .socials {
+    display: inline-flex;
+    gap: 15px;
+}
+
+footer .socials a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem; /* Ajuste responsivo */
+    padding: 0 10px;
+    position: relative;
+}
+
+footer .socials a:not(:first-child) {
+    border-left: 1px solid #fff;
+    padding-left: 15px;
+}
+
+footer .socials a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .text-container h2 {
+        font-size: 2rem; /* Encabezado más pequeño */
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Ajustar tamaño del menú */
+    }
+
+    .hero-image img {
+        height: auto;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    footer .socials a {
+        font-size: 0.8rem; /* Ajuste de tamaño */
+        padding: 0 5px;
+    }
+}

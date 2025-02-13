@@ -1,0 +1,156 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;  /* Usa Poppins para el texto general */
+    margin: 0;
+    padding: 0;
+    background-color: #fceedd;
+    overflow-x: hidden; /* Evitar desbordamiento horizontal */
+}
+
+/* Global Typography for Headings */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;  /* h1 y h2 usarán Montserrat */
+}
+
+/* Navbar */
+header .navbar {
+    height: 3.75rem;              /* 60px */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);  /* 4px 6px */
+    display: flex;
+    align-items: center;
+    padding: 0 0.9375rem;         /* 15px */
+}
+
+header .navbar-brand img {
+    border-radius: 50%;
+    width: 3.75rem;               /* 60px */
+    height: 3.75rem;              /* 60px */
+}
+
+.navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0 0.9375rem;         /* 15px */
+    line-height: 3.75rem;         /* 60px */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ea2336;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ea2336;
+    font-weight: bold;
+}
+
+.navbar-collapse {
+    background-color: #fff;       /* Fondo blanco solo para el menú desplegable */
+    border-radius: 0.75rem;        /* 12px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 4px y 8px */
+    padding: 0.625rem;            /* 10px */
+}
+
+/* Asegurarse de que los estilos no afecten el navbar en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        background-color: transparent; /* Fondo transparente en pantallas grandes */
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #a00116;
+    border-color: #a00116;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #68000e;
+    border-color: #a00116;
+}
+
+/* Formulario */
+form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+form .form-control {
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1); /* 1px 3px */
+    transition: box-shadow 0.3s;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 0.3125rem #68000e; /* 5px */
+    border-color: #a00116;
+}
+
+form button {
+    border-radius: 1rem;
+    font-weight: bold;
+    padding: 0.625rem 1.25rem;   /* 10px 20px */
+}
+
+/* Mapa */
+iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    width: 100vw;
+    text-align: center;
+    padding: 1.875rem 0;         /* 30px 0 */
+    position: relative;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    color: #fff;
+    margin: 0.625rem 0;          /* 10px 0 */
+    font-size: 0.9rem;
+}
+
+footer .socials {
+    display: inline-flex;
+    gap: 0.9375rem;             /* 15px */
+}
+
+footer .socials a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 0.625rem;         /* 10px */
+    position: relative;
+}
+
+footer .socials a:not(:first-child) {
+    border-left: 0.0625rem solid #fff; /* 1px */
+    padding-left: 0.9375rem;      /* 15px */
+}
+
+footer .socials a:hover {
+    text-decoration: underline;
+}
