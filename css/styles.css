@@ -153,7 +153,7 @@ header .navbar-brand img {
 
 .text-container p {
     font-size: 1rem;
-    color: #000;
+    color: #fff;
     opacity: 0;
     transform: scale(0.8);
     animation: fadeIn 3s ease forwards;
