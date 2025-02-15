@@ -79,7 +79,6 @@ header .navbar-brand img {
 .faq-section {
     margin: 2rem;                /* Agrega 2rem de margen alrededor de la sección */
     padding: 3.125rem 1.25rem;    /* 50px 20px */
-    background-color: #fceedd;
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
 }
 
